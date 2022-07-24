@@ -46,9 +46,11 @@
   <script>
     Validator({
       form: '#form-1',
+      errorSelector: '.form-message',
       rules: [
         Validator.isRequired('#fullname'),
-        Validator.isRequired('#email'),
+        Validator.isEmail('#email'),
+        Validator.isLength('#password', 6, 12)
       ]
     })
   </script>
